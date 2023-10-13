@@ -62,8 +62,7 @@ const Container = styled.div`
  padding: 0 20px;
  min-height: 60px;
  z-index: 2;
- a img{
- }
+ 
 `
 
 const Menu = styled.div`
@@ -92,6 +91,11 @@ a{
   text-transform: uppercase;
   padding: 0 10px;
   flex-wrap: nowrap;
+}
+@media (max-width: 768px){
+  a{
+    display: none;
+  } 
 }
 `
 
