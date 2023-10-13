@@ -3,7 +3,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react'
 import { useSelector } from 'react-redux';
-import Fade from 'react-reveal/Fade';
 
 function Header() {
   const carState = useSelector(store => store.car)
@@ -16,26 +15,20 @@ function Header() {
 
   return (
     <Container>
-      <Fade right >
         <a >
           <img src="/images/logo.svg" atl="logo icon" />
         </a>
-      </Fade>
-      <Fade top>
         <Menu>
           <a href="#">Model S</a>
           <a href="#">Model 3</a>
           <a href="#">Model X</a>
           <a href="#">Model Y</a>
         </Menu>
-      </Fade>
-      <Fade left >
         <RightMenu>
           <a href="#">Shop</a>
           <a href="#">Tesla Account</a>
           <CustomMenu onClick={handleOpenClose} />
         </RightMenu>
-      </Fade>
 
       <BurgerNav isShow={openClose} >
         <CloseWrapper>
